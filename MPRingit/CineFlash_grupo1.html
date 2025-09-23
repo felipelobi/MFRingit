@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CineFlash</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <div class="container my-5">
+        <h1 class="text-center mb-4">🎬 Bienvenidos a CineFlash</h1>
+        <div class="row justify-content-center">
+
+            <!-- Tarjeta 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://pics.filmaffinity.com/El_pianista-978132965-large.jpg" class="card-img-top"
+                        alt="Pianista">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">El Pianista</h5>
+                        <button class="btn btn-primary reservar-btn" data-pelicula="Pianista">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://es.web.img2.acsta.net/medias/nmedia/18/86/33/09/19835623.jpg" class="card-img-top"
+                        alt="StarWars">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Star Wars: La Amenaza Fantasma</h5>
+                        <button class="btn btn-primary reservar-btn" data-pelicula="StarWars">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://m.media-amazon.com/images/M/MV5BMTY0OTU1NzkxMl5BMl5BanBnXkFtZTcwMzI2NDUzMw@@._V1_FMjpg_UX1000_.jpg"
+                        class="card-img-top" alt="Shrek">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">Shrek Para Siempre</h5>
+                        <button class="btn btn-primary reservar-btn" data-pelicula="Shrek">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="col-md-4 mb-4">
+                <div class="card h-100">
+                    <img src="https://pics.filmaffinity.com/rings-796722362-large.jpg" class="card-img-top"
+                        alt="El Aro">
+                    <div class="card-body text-center">
+                        <h5 class="card-title">El Aro</h5>
+                        <button class="btn btn-primary reservar-btn" data-pelicula="El Aro">Reservar</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Modal de Reserva -->
+    <div class="modal fade" id="modalReserva" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog">
+            <form id="form-reserva" class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Reserva de Entradas</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-3">
+                        <label class="form-label">Película</label>
+                        <input type="text" id="pelicula" class="form-control" readonly />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Horario</label>
+                        <select id="horario" class="form-select" required>
+                            <option value="">Selecciona una hora</option>
+                            <option>15:00</option>
+                            <option>18:00</option>
+                            <option>21:00</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Cantidad de Asientos</label>
+                        <input type="number" id="asientos" class="form-control" min="1" required />
+                    </div>
+
+                    <hr>
+                    <p class="fw-bold">Pago (simulado)</p>
+
+                    <div class="mb-3">
+                        <label class="form-label">Número de tarjeta</label>
+                        <input type="text" class="form-control" required placeholder="**** **** **** 1234" />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Nombre del titular</label>
+                        <input type="text" class="form-control" required />
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">CVV</label>
+                        <input type="text" class="form-control" required maxlength="4" />
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-success">Confirmar Reserva</button>
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
