@@ -130,17 +130,6 @@ const createMobileMenu = () => {
 };
 
 createMobileMenu();
-// Parallax effect for hexagons
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hexagons = document.querySelectorAll('.hexagon');
-    
-    hexagons.forEach((hex, index) => {
-        const speed = 0.5 + (index * 0.1);
-        const yPos = -(scrolled * speed);
-        hex.style.transform = `translateY(${yPos}px) rotate(${scrolled * 0.1}deg)`;
-    });
-});
 
 // Card hover effects
 document.querySelectorAll('.service-card').forEach(card => {
